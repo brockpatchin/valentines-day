@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ffcccc, #ffe6e6);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    h1 {
+      color: #d6336c;
+      font-size: 3em;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    #yesBtn {
+      background-color: #ff4d4d;
+      color: white;
+    }
+    #noBtn {
+      background-color: #999;
+      color: white;
+      position: relative;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    img.heart {
+      width: 500px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WOOOOOOO WE ARE SO LOCKED IN BABE</h1>
+    <img src="yes.gif" alt="Heart" class="heart">
+    <div>
+    </div>
+    <h1>I LIKE YOU SO MUCH HANNAH LEE</h1>
+  </div>
+
+  <script>
+    document.getElementById('yesBtn').addEventListener('click', function() {
+      window.location.href = 'yes.html';
+    });
+
+    const noBtn = document.getElementById('noBtn');
+    noBtn.addEventListener('mouseover', function() {
+      const maxX = window.innerWidth - noBtn.offsetWidth;
+      const maxY = window.innerHeight - noBtn.offsetHeight;
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+      noBtn.style.position = 'absolute';
+      noBtn.style.left = randomX + 'px';
+      noBtn.style.top = randomY + 'px';
+    });
+  </script>
+</body>
+</html>
